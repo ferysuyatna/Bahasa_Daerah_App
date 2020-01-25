@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="@+id/et_searching"
+        app:layout_constraintEnd_toStartOf="@+id/et_searching"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toEndOf="@+id/et_searching"
+        app:layout_constraintTop_toTopOf="@+id/et_searching" />
+
+    <TextView
+        android:id="@+id/tv_promo_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Promo Class"
+        app:layout_constraintEnd_toEndOf="@+id/et_searching"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_searching"
+        app:layout_constraintTop_toBottomOf="@+id/et_searching" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="339dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="@+id/tv_promo_class"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_promo_class"
+        app:layout_constraintTop_toBottomOf="@+id/tv_promo_class" />
+
+    <ImageView
+        android:id="@+id/iv_kamus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/iv_kuis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tv_kamus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Kamus"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kamus"
+        app:layout_constraintStart_toStartOf="@+id/iv_kamus"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kamus" />
+
+    <TextView
+        android:id="@+id/tv_kuis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Kuis"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kuis"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/iv_kuis"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kuis" />
+
+    <EditText
+        android:id="@+id/et_searching"
+        android:layout_width="289dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Serarch"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_kursus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kamus"
+        app:layout_constraintStart_toStartOf="@+id/iv_kamus"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kamus"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/iv_tentang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kuis"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_kuis"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kuis"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_kursus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Kursus"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kursus"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/iv_kursus"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kursus" />
+
+    <TextView
+        android:id="@+id/tv_tentang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Tentang"
+        app:layout_constraintEnd_toEndOf="@+id/iv_tentang"
+        app:layout_constraintStart_toStartOf="@+id/iv_tentang"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tentang" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
