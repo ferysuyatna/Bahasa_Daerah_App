@@ -1,11 +1,13 @@
 package com.bahasadaerahapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bahasadaerahapp.kamus.KamusActivity;
@@ -15,23 +17,25 @@ import com.bahasadaerahapp.kursus.KursusActivity;
 public class HomeActivity extends AppCompatActivity {
 
     private TextView textViewName;
-    private ImageView ivKamus, ivKuis, ivKursus, ivTentang;
+    private LinearLayout llKamus, llKuis, llKursus, llTentang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
         textViewName = findViewById(R.id.tv_username);
-        ivKamus = findViewById(R.id.iv_kamus);
-        ivKuis = findViewById(R.id.iv_kuis);
-        ivKursus = findViewById(R.id.iv_kursus);
-        ivTentang = findViewById(R.id.iv_tentang);
+        llKamus = findViewById(R.id.ll_kamus);
+        llKuis = findViewById(R.id.ll_kuis);
+        llKursus = findViewById(R.id.ll_kursus);
+        llTentang = findViewById(R.id.ll_tentang);
 
         String nameFromIntent = getIntent().getStringExtra("EMAIL");
-        textViewName.setText("Welcome " + nameFromIntent);
+        String[] name = nameFromIntent.split("@");
+        textViewName.setText(name[0]);
 
-        ivKamus.setOnClickListener(new View.OnClickListener() {
+        llKamus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, KamusActivity.class);
@@ -39,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ivKuis.setOnClickListener(new View.OnClickListener() {
+        llKuis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, KuisActivity.class);
@@ -47,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ivKursus.setOnClickListener(new View.OnClickListener() {
+        llKursus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, KursusActivity.class);
@@ -55,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ivTentang.setOnClickListener(new View.OnClickListener() {
+        llTentang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, TentangActivity.class);
