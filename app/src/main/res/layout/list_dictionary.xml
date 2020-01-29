@@ -12,20 +12,26 @@
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/iv_listimage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            tools:src="@mipmap/ic_app"/>
+        android:orientation="vertical">
+
         <TextView
-            android:id="@+id/tv_listname"
+            android:id="@+id/tv_bhsIndo"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:gravity="center_vertical"
-            tools:text="Bahasa Bugis" />
+            tools:text="Bahasa Indonesia" />
+
+        <TextView
+            android:id="@+id/tv_bhsDaerah"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            tools:text="Bahasa Daerah" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

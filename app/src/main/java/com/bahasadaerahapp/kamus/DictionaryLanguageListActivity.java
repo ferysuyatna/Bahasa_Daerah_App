@@ -1,26 +1,24 @@
 package com.bahasadaerahapp.kamus;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.bahasadaerahapp.R;
 import com.bahasadaerahapp.adapter.DictionaryLanguageList;
-import com.bahasadaerahapp.adapter.DictionaryListAdapter;
-import com.bahasadaerahapp.model.Dictionary;
-import com.bahasadaerahapp.model.DictionaryData;
 import com.bahasadaerahapp.model.DictionaryLanguage;
 import com.bahasadaerahapp.model.DictionaryLanguageData;
 
 import java.util.ArrayList;
 
-public class KamusActivity extends AppCompatActivity {
+public class DictionaryLanguageListActivity extends AppCompatActivity {
+
     private RecyclerView recyclerView;
-    private ArrayList<Dictionary> list;
+    private ArrayList<DictionaryLanguage> list;
 
     final String STATE_TITLE = "state_title";
     final String STATE_LIST = "state_list";
@@ -28,9 +26,9 @@ public class KamusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kamus);
+        setContentView(R.layout.activity_list_language);
 
-        recyclerView = findViewById(R.id.rv_listbahasa);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
 
         list = new ArrayList<>();
@@ -39,11 +37,11 @@ public class KamusActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             setActionBarTitle("List Language");
-            list.addAll(DictionaryData.getListData());
+            list.addAll(DictionaryLanguageData.getListData());
             showRecyclerViewList();
         } else {
             String stateTitle = savedInstanceState.getString(STATE_TITLE);
-            ArrayList<Dictionary> stateList = savedInstanceState.getParcelableArrayList(STATE_LIST);
+            ArrayList<DictionaryLanguage> stateList = savedInstanceState.getParcelableArrayList(STATE_LIST);
             setActionBarTitle(stateTitle);
             list.addAll(stateList);
         }
@@ -62,7 +60,7 @@ public class KamusActivity extends AppCompatActivity {
 
     private void showRecyclerViewList() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        DictionaryListAdapter listAdapter = new DictionaryListAdapter(this);
+        DictionaryLanguageList listAdapter = new DictionaryLanguageList(this);
         listAdapter.setListMountain(list);
         recyclerView.setAdapter(listAdapter);
     }
