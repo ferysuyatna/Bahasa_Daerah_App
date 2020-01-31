@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bahasa Daerah App</string>
+    <string name="app_name">Belajar Bahasa Daerah</string>
     <string name="hint_name">Name</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
@@ -19,4 +19,11 @@
     <string name="searchText">Search</string>
     <string name="profile">profile</string>
     <string name="username">username</string>
+    <string name="name_of_fery">Agus Fery Suyatna</string>
+    <string name="email_of_fery">ferysuyatna08@gmail.com</string>
+    <string name="name_of_hadiyan">Hadiyan Nadzri H</string>
+    <string name="email_of_hadiyan">hadianharis@gmail.com</string>
+    <string name="name_of_dinu">A. Nurul Istiqamah</string>
+    <string name="email_of_dinu">hello.andinu@gmail.com</string>
+    <string name="you_can_click_our_name_to_email_us">You can click our name to email us:)</string>
 </resources>
