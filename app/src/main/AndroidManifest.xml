@@ -2,22 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bahasadaerahapp">
 
+    <uses-permission android:name="ANDROID.PERMISSION.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_app"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TentangActivity" />
+        <activity android:name=".utils.TentangActivity" />
         <activity android:name=".kursus.KursusActivity" />
         <activity android:name=".kuis.KuisActivity" />
+        <activity android:name=".kuis.StartingQuizActivity" />
         <activity android:name=".kamus.KamusActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".RegistrasiActivity" />
+        <activity android:name=".utils.ProfileActivity" />
+        <activity android:name=".utils.RegistrasiActivity" />
+        <activity android:name=".kuis.QuizListLanguageActivity" />
+        <activity android:name=".kursus.CourseLanguageListActivity" />
         <activity android:name=".kamus.DictionaryLanguageListActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".HomeActivity">
+        <activity android:name=".utils.HomeActivity" />
+        <activity android:name=".utils.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

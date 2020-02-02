@@ -1,4 +1,4 @@
-package com.bahasadaerahapp;
+package com.bahasadaerahapp.utils;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -7,7 +7,9 @@ import androidx.core.widget.NestedScrollView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bahasadaerahapp.R;
 import com.bahasadaerahapp.db.helper.InputValidation;
 import com.bahasadaerahapp.db.model.User;
 import com.bahasadaerahapp.db.sql.DatabaseHelper;
@@ -25,7 +27,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private TextInputLayout textInputLayoutConfirmPassword;
-
+    private ImageView imageViewProfile;
     private TextInputEditText textInputEditTextName;
     private TextInputEditText textInputEditTextEmail;
     private TextInputEditText textInputEditTextPassword;
@@ -50,21 +52,21 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void initViews(){
-        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+        nestedScrollView =  findViewById(R.id.nestedScrollView);
 
-        textInputLayoutName = (TextInputLayout) findViewById(R.id.textInputLayoutName);
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
-        textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        textInputLayoutConfirmPassword = (TextInputLayout) findViewById(R.id.textInputLayoutConfirmPassword);
+        textInputLayoutName =  findViewById(R.id.textInputLayoutName);
+        textInputLayoutEmail =  findViewById(R.id.textInputLayoutEmail);
+        textInputLayoutPassword =  findViewById(R.id.textInputLayoutPassword);
+        textInputLayoutConfirmPassword =  findViewById(R.id.textInputLayoutConfirmPassword);
 
-        textInputEditTextName = (TextInputEditText) findViewById(R.id.textInputEditTextName);
-        textInputEditTextEmail = (TextInputEditText) findViewById(R.id.textInputEditTextEmail);
-        textInputEditTextPassword = (TextInputEditText) findViewById(R.id.textInputEditTextPassword);
-        textInputEditTextConfirmPassword = (TextInputEditText) findViewById(R.id.textInputEditTextConfirmPassword);
+        textInputEditTextName =  findViewById(R.id.textInputEditTextName);
+        textInputEditTextEmail =  findViewById(R.id.textInputEditTextEmail);
+        textInputEditTextPassword =  findViewById(R.id.textInputEditTextPassword);
+        textInputEditTextConfirmPassword =  findViewById(R.id.textInputEditTextConfirmPassword);
 
-        appCompatButtonRegister = (AppCompatButton) findViewById(R.id.appCompatButtonRegister);
+        appCompatButtonRegister =  findViewById(R.id.appCompatButtonRegister);
 
-        appCompatTextViewLoginLink = (AppCompatTextView) findViewById(R.id.appCompatTextViewLoginLink);
+        appCompatTextViewLoginLink =  findViewById(R.id.appCompatTextViewLoginLink);
     }
 
     private void initListeners(){

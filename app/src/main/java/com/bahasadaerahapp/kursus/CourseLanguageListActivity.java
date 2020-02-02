@@ -1,4 +1,4 @@
-package com.bahasadaerahapp.kamus;
+package com.bahasadaerahapp.kursus;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bahasadaerahapp.R;
-import com.bahasadaerahapp.adapter.DictionaryLanguageList;
+import com.bahasadaerahapp.adapter.CourseLanguageList;
 import com.bahasadaerahapp.model.DictionaryLanguage;
 import com.bahasadaerahapp.model.DictionaryLanguageData;
 
 import java.util.ArrayList;
 
-public class DictionaryLanguageListActivity extends AppCompatActivity {
+public class CourseLanguageListActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ArrayList<DictionaryLanguage> list;
@@ -32,6 +32,8 @@ public class DictionaryLanguageListActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         list = new ArrayList<>();
+//        list.addAll(MountainData.getListData());
+//        showRecyclerViewList();
 
         if (savedInstanceState == null) {
             setActionBarTitle("List Language");
@@ -58,7 +60,7 @@ public class DictionaryLanguageListActivity extends AppCompatActivity {
 
     private void showRecyclerViewList() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        DictionaryLanguageList listAdapter = new DictionaryLanguageList(this);
+        CourseLanguageList listAdapter = new CourseLanguageList(this);
         listAdapter.setListMountain(list);
         recyclerView.setAdapter(listAdapter);
     }

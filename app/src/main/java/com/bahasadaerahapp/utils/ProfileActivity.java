@@ -1,8 +1,10 @@
-package com.bahasadaerahapp;
+package com.bahasadaerahapp.utils;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.bahasadaerahapp.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

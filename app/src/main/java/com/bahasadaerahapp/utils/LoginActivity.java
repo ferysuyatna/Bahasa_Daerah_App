@@ -1,4 +1,4 @@
-package com.bahasadaerahapp;
+package com.bahasadaerahapp.utils;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bahasadaerahapp.R;
 import com.bahasadaerahapp.db.helper.InputValidation;
 import com.bahasadaerahapp.db.sql.DatabaseHelper;
 import com.google.android.material.snackbar.Snackbar;
@@ -56,6 +57,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         appCompatButtonLogin = (AppCompatButton) findViewById(R.id.appCompatButtonLogin);
 
         textViewLinkRegister = (AppCompatTextView) findViewById(R.id.textViewLinkRegister);
+
+        PreferenceUtils utils = new PreferenceUtils();
+
+        if (utils.getEmail(this) != null ){
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }else{
+
+        }
+
     }
 
     private void initListeners(){
@@ -94,10 +105,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
+            PreferenceUtils.saveEmail(textInputEditTextEmail.getText().toString().trim(), this);
+            PreferenceUtils.savePassword(textInputEditTextPassword.getText().toString().trim(), this);
             Intent accountsIntent = new Intent(activity, HomeActivity.class);
             accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
             startActivity(accountsIntent);
+            finish();
         } else {
             Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
         }
