@@ -11,8 +11,10 @@ public class DictionaryLanguageData { // array to store data that will be displa
         };
 
     private static int[] languageImages = new int[]{
-            R.drawable.bandung,
-            R.drawable.bali
+            R.drawable.ic_about,
+            R.drawable.ic_user
+//            R.drawable.bandung,
+//            R.drawable.bali
     };
 
 //        public static ArrayList<DirectoryLanguage> getListData() {
